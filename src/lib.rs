@@ -44,3 +44,6 @@ pub use dex::Dex;
 pub use dex_data::{GameType, Gender, SideID, ID};
 pub use pokemon::{Pokemon, PokemonSet, TrappedState};
 pub use prng::{PRNGSeed, PRNG};
+
+// C FFI — compiled in when the crate is built as a cdylib / staticlib.
+pub mod ffi;

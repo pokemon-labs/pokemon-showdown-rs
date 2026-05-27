@@ -5,6 +5,13 @@ edition = "2021"
 description = "A Rust port of the Pokemon Showdown battle simulator"
 license = "MIT"
 
+[lib]
+# Build as a Rust library (rlib) by default.
+# To build the C-compatible shared library:  cargo build --release
+# The cdylib target produces libpokemon_showdown.so / .dylib / .dll
+# The staticlib target produces libpokemon_showdown.a for static linking.
+crate-type = ["rlib", "cdylib", "staticlib"]
+
 [features]
 default = []
 # Enable verbose debug logging (significantly impacts performance)
